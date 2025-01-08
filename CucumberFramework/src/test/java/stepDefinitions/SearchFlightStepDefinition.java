@@ -44,6 +44,7 @@ public class SearchFlightStepDefinition {
 	@Then("user selects country {string} from the dropdwon.")
 	public void user_selects_country_from_the_dropdwon(String name) {
 		searchFlightPage.enterCountry(name);
+		logger.info("Country name entered");
 	}
 	
 	@Then("user selects RoundTrip Radio")
