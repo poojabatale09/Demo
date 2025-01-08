@@ -23,6 +23,8 @@ TestContextSetup testContextSetup;
 
 private ConsoleLogCapturer logCapturer;
 
+//new code has been added by pooja B
+
 private static final Logger logger = LogManager.getLogger(Hooks.class);
 	
 	public Hooks(TestContextSetup testContextSetup)
