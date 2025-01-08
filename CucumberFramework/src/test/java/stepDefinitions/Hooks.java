@@ -61,6 +61,7 @@ private static final Logger logger = LogManager.getLogger(Hooks.class);
 		File sourcePath= 	((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		byte[] fileContent = FileUtils.readFileToByteArray(sourcePath);
 		scenario.attach(fileContent, "image/png", "image");
+		logger.info("Screenshot has been added");
 		
 		}
 		
