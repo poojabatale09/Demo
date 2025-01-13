@@ -1,6 +1,6 @@
 Feature: Search Flight for the Customer
 
-@test
+
 Scenario: User navigates to new window for Flight Booking
 
 Given User is on GreenCart Landing page
