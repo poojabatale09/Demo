@@ -2,6 +2,9 @@ package stepDefinitions;
 
 import java.util.List;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,6 +17,10 @@ public class RegistrationStepDefinition {
 	TestContextSetup testContextSetup;
 	public RegistrationPage registrationPage;
 	
+	private static final Logger logger = LogManager.getLogger(RegistrationStepDefinition.class);
+	
+	//private static final Logger logger = LogManager.getLogger(SearchFlightStepDefinition.class);
+	
 	public RegistrationStepDefinition(TestContextSetup testContextSetup)
 	{
 		this.testContextSetup=testContextSetup;
@@ -23,6 +30,7 @@ public class RegistrationStepDefinition {
 	@Given("User is on Registration Page")
 	public void user_is_on_registration_page() {
 	    
+		logger.info("User is on registration page");
 	}
 
 	@When("User enters all the valid inputs")
@@ -39,6 +47,7 @@ public class RegistrationStepDefinition {
         String confirmPassword = userInputs.get(7);
         
         registrationPage.fillRegistrationForm(firstName, lastName, email, phone, gender, country, password, confirmPassword);
+        logger.info(firstName +" "+ lastName +" User inputs has entered");
 
 	}
 

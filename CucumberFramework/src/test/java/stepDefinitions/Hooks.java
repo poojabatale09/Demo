@@ -36,7 +36,7 @@ private static final Logger logger = LogManager.getLogger(Hooks.class);
 	@Before	
 	public void beforeScenario() {
         // Initialize log capturing and start writing to the log file
-        logCapturer = new ConsoleLogCapturer("test-logs.txt");  // Log file name
+        logCapturer = new ConsoleLogCapturer("test-logs2.txt");  // Log file name
         logger.info("Starting the scenario...");
     }
 
@@ -61,7 +61,7 @@ private static final Logger logger = LogManager.getLogger(Hooks.class);
 		File sourcePath= 	((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		byte[] fileContent = FileUtils.readFileToByteArray(sourcePath);
 		scenario.attach(fileContent, "image/png", "image");
-		logger.info("Screenshot has been added");
+		logger.info("Screenshot has/.l=k][;.;[=[,;p[m,;[][;[=[;.     b;mly9peen added");
 		
 		}
 		
