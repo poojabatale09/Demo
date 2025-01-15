@@ -38,11 +38,13 @@ public class TestBase {
 		{
 			if(browser.equalsIgnoreCase("chrome"))
 			{
-		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//src//test//resources//chromedriver.exe");
-		driver = new ChromeDriver();// driver gets the life
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//src//test//resources//chromedriver.exe");
+			driver = new ChromeDriver();// driver gets the life
 				
-				//WebDriverManager.chromedriver().setup();  
-				//driver=new ChromeDriver();
+				//WebDriverManager.chromedriver().driverVersion("131.0.6778.205").setup();
+				 //WebDriverManager.chromedriver().setup();  
+				//driver = new ChromeDriver();
+			
 		
 		 
 			}
