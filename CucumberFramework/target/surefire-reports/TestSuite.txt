@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.509 s - in TestSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.482 s <<< FAILURE! - in TestSuite
+cucumberOptions.TestNGTestRunner.runScenario["Successfull Regitartion with valid input", "Optional[User Registration]"](1)  Time elapsed: 5.233 s  <<< FAILURE!
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+

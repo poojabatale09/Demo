@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -32,7 +33,7 @@ public class RegistrationStepDefinition {
 	    
 		logger.info("User is on registration page");
 	}
-
+/*
 	@When("User enters all the valid inputs")
 	public void user_enters_all_the_valid_inputs(DataTable dataTable) {
 		List<String> userInputs = dataTable.asList();
@@ -50,6 +51,29 @@ public class RegistrationStepDefinition {
         logger.info(firstName +" "+ lastName +" User inputs has entered");
 
 	}
+	*/
+	
+	@When("User enters all the valid inputs")
+	public void user_enters_all_the_valid_inputs(DataTable dataTable) {
+		List<Map<String,String>> userInputs = dataTable.asMaps();
+		
+		
+		Map<String, String> row = userInputs.get(0);
+		
+		String firstName = row.get("fname");
+        String lastName = row.get("fname");
+        String email = row.get("fname");
+        String phone = row.get("fname");
+        String gender = row.get("fname");
+        String country = row.get("fname");
+        String password = row.get("fname");
+        String confirmPassword = row.get("fname");
+        
+        registrationPage.fillRegistrationForm(firstName, lastName, email, phone, gender, country, password, confirmPassword);
+        logger.info(firstName +" "+ lastName +" User inputs has entered");
+
+	}
+	
 
 	@Then("User clicks on Submit Button")
 	public void user_clicks_on_submit_button() {
