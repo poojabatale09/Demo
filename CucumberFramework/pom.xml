@@ -122,6 +122,11 @@
   		<artifactId>WebAutomation_Extent</artifactId>
   		<version>2.0-SNAPSHOT</version>
   	</dependency> -->
+  <dependency>
+  	<groupId>sc-java-testing</groupId>
+  	<artifactId>sc-java-testing</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </dependency>
   </dependencies>
 
   <build>

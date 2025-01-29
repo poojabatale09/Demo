@@ -10,6 +10,7 @@ public class PageObjectManager {
 	public CheckoutPage checkoutPage;
 	public SearchFlightPage seachFlightPage;
 	public RegistrationPage registrationPage;
+	public PaginationPage paginationPage;
 	
 	public PageObjectManager(WebDriver driver)
 	{
@@ -47,5 +48,13 @@ public class PageObjectManager {
 		registrationPage = new RegistrationPage(driver);
 		return registrationPage;
 				
+	}
+	
+	public PaginationPage getPaginationPage()
+	{
+		
+		paginationPage = new PaginationPage(driver);
+		return paginationPage;		
+		
 	}
 }

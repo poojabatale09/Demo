@@ -25,7 +25,8 @@ public class TestBase {
 		Properties prop = new Properties();
 		prop.load(fis);
 		//String url = prop.getProperty("QAUrl");
-		String url = prop.getProperty("TestURL");
+		//String url = prop.getProperty("TestURL");
+		String url = prop.getProperty("PaginationURL");
 		String browser_properties = prop.getProperty("browser");
 		String browser_maven=System.getProperty("browser");
 		// result = testCondition ? value1 : value2
@@ -55,6 +56,7 @@ public class TestBase {
 			}
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		    driver.get(url);
+		    driver.manage().window().maximize();
 		}
 		
 		return driver;
