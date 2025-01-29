@@ -16,7 +16,7 @@ import pageObjects.LandingPage;
 import utils.TestContextSetup;
 
 public class CheckoutPageStepDefinition {
-public WebDriver driver;
+
 public String landingPageProductName;
 public String offerPageProductName;
 public CheckoutPage checkoutPage;

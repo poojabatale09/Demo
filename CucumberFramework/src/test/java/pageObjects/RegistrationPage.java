@@ -2,6 +2,9 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegistrationPage {
@@ -12,7 +15,11 @@ public class RegistrationPage {
 	{
 		
 		this.driver = driver;
+		PageFactory.initElements(driver,this);
 	}
+	
+	@FindBy(xpath="//input[@placeholder='First Name']")
+	private WebElement fname;
 	
 	  By firstName = By.xpath("//input[@placeholder='First Name']");
 	  By lastName = By.xpath("//input[@placeholder='Last Name']");
@@ -39,7 +46,7 @@ public class RegistrationPage {
 public void fillRegistrationForm(String strfname, String strlname, String stremail, String phoneNumber,
               String strgender, String strcountry, String strpassword, String strconfirmPassword)	  
 {
-		driver.findElement(firstName).sendKeys(strfname);
+		fname.sendKeys(strfname);
 		driver.findElement(lastName).sendKeys(strlname);
 		driver.findElement(email).sendKeys(stremail);
 		driver.findElement(telephone).sendKeys(phoneNumber);

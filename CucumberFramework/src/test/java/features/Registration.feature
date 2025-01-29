@@ -1,5 +1,5 @@
 Feature: User Registration
-@test
+
 Scenario: Successfull Regitartion with valid input
 
 Given User is on Registration Page
